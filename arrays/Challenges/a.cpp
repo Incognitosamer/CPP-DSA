@@ -1,6 +1,7 @@
 // Given an array a[] of size n. For every time i from 0 to n-1 output max[from array a[]]
 
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main(){
@@ -11,10 +12,9 @@ int main(){
                 cin>>arr[i];
         }
 
+        int max=INT_MIN;
         for(int i=0; i<n; i++){
-                int max=arr[i];
-                for(int j=0; j<i; j++){
-                        max=arr[j];
+                for(int j=0; j<=i; j++){
                         if(arr[j]>max){
                                 max=arr[j];
                         }
